@@ -1,0 +1,15 @@
+<div class="div-row">
+  <mat-card *ngFor="let user of usersList" class="user-card">
+    <mat-card-content>
+      <p>Username: <span class="lbl-title">{{user.username | titlecase}}</span></p>
+      <p>Email: {{user.email}}</p>
+
+      <div class="div-buttons">
+        <button mat-raised-button color="primary" (click)="onEdit(user)">Edit</button>
+        <div class="div-spacer"></div>
+        <button mat-raised-button color="accent" (click)="onDelete(user)">Delete</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

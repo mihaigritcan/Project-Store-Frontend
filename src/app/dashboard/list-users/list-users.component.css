@@ -1,0 +1,30 @@
+.user-card {
+  background-color: white;
+  display: flex; /* unnecesary, only the container needs to be flex */
+  /* unless this is another flex container */
+  flex-direction: column; /* also unnecesary unless it's for purposes not shown in the example */
+  min-width: 500px;
+  margin: 10px;
+  height: 150px;
+}
+
+.lbl-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.div-buttons {
+  display: flex;
+}
+
+.div-spacer {
+  width: 16px;
+  height: 16px;
+}
+
+.div-row {
+  display: flex;
+  flex: 1; /* unnecesary */
+  flex-wrap: wrap;
+}

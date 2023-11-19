@@ -1,0 +1,64 @@
+.div-elements {
+  display: flex;
+}
+
+.div-spacer {
+  width: 16px;
+}
+
+.button-spacer {
+  flex: 1 1 auto;
+}
+
+.page-sidenav {
+  padding: 20px;
+}
+
+.page-container {
+  height: 100%;
+}
+
+.app-logo {
+  width: 300px;
+}
+.app-name {
+  font-size: 20px;
+  color: black;
+  font-style: normal;
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+
+.div-menu {
+  margin-top: 50px;
+}
+
+.item-menu-title {
+  font-size: 16px;
+  color: black;
+  font-style: normal;
+  text-align: center;
+}
+
+.div-items {
+  display: flex;
+  width: 100%;
+}
+
+.div-users {
+  display: flex;
+  width: 100%;
+}
+
+.div-carts {
+  display: flex;
+  width: 100%;
+}
+
+.lbl-title {
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}

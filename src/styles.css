@@ -1,0 +1,30 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.input-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.card-container{
+  width: 400px;
+  margin: auto;
+}
+
+.input-field{
+  width: 100%;
+}
+
+.div-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.div-buttons-container{
+  margin: auto;
+  display: grid;
+}
+
+
+
+

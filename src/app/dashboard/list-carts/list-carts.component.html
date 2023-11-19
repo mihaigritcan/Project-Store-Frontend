@@ -1,0 +1,20 @@
+<div class="div-row">
+  <mat-card class="item-card" *ngFor="let cart of carts">
+    <p class="lbl-title">User: {{ cart.user.username }}</p>
+
+    <div *ngFor="let item of cart.items; let count = index;" class="item-element">
+      <p class="lbl-text">{{ (count + 1) }} - {{ item.title }}</p>
+      <p class="lbl-text">{{ item.description }}</p>
+      <p class="lbl-text">{{ item.category }}</p>
+      <p class="lbl-text">{{ item.price }}</p>
+
+    </div>
+
+    <p class="lbl-total">Total: {{ calculateTotalCart(cart.items) }}</p>
+
+    <div class="div-buttons">
+      <button mat-raised-button color="primary" (click)="deleteCart(cart)">Delete Order</button>
+    </div>
+  </mat-card>
+
+</div>

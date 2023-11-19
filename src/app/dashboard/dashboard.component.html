@@ -1,0 +1,54 @@
+<mat-drawer-container class="page-container" autosize>
+  <mat-drawer #drawer class="page-sidenav" mode="side">
+    <img class="app-logo" [src]="logo"/>
+
+    <p class="app-name">{{ title | uppercase }}</p>
+
+    <div class="div-menu">
+      <mat-card *ngFor="let item of items" (click)="onChangePage(item)">
+        <mat-card-content class="item-menu-title">{{ item.title | uppercase }}</mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content class="item-menu-title">{{ owner | titlecase }}</mat-card-content>
+      </mat-card>
+    </div>
+  </mat-drawer>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{ title}}</span>
+    <span class="button-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <p class="lbl-title">Items Section</p>
+
+  <div class="div-items">
+    <app-add-edit-item [item]="selectedItem"></app-add-edit-item>
+    <div class="div-spacer"></div>
+    <app-list-items [showAdmin]="true" (changeData)="onChangeItem($event)"></app-list-items>
+  </div>
+
+  <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
+
+  <p class="lbl-title">Users Section</p>
+
+  <div class="div-users">
+    <app-add-edit-user [user]="selectedUser"></app-add-edit-user>
+    <app-list-users (changeData)="onChangeUser($event)"></app-list-users>
+  </div>
+
+  <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
+
+  <p class="lbl-title">Carts Section</p>
+  <div class="div-carts">
+    <app-list-carts></app-list-carts>
+  </div>
+
+
+</mat-drawer-container>

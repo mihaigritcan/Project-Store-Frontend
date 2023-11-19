@@ -1,0 +1,26 @@
+.movie-card-container {
+  width: 400px;
+}
+
+.div-parent {
+  display: grid;
+  padding-bottom: 50px;
+  padding-top: 10px;
+}
+
+.div-row {
+  display: inline-flex;
+  margin: auto;
+}
+
+.div-image-row {
+  display: flex;
+}
+
+.img-movie {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  margin-left: 30px;
+  height: 300px;
+}

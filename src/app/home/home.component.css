@@ -1,0 +1,48 @@
+.button-spacer {
+  flex: 1 1 auto;
+}
+
+.page-sidenav {
+  padding: 20px;
+}
+
+.page-container {
+  height: 100%;
+}
+
+.app-logo {
+  width: 200px;
+  align-content: center;
+}
+.app-name {
+  font-size: 20px;
+  color: black;
+  font-style: normal;
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+
+.div-menu {
+  margin-top: 50px;
+}
+
+.item-menu-title {
+  font-size: 16px;
+  color: black;
+  font-style: normal;
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+
+.div-banner {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  margin-top:50px;
+}
+
+.img-banner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}

@@ -1,0 +1,30 @@
+<div style="width: 100vw">
+  <div class="div-row">
+    <mat-card *ngFor="let item of itemsList" class="item-card">
+      <mat-card-content>
+        <div style="display: flex">
+          <div>
+            <p>Title: <span class="lbl-title">{{item.title | titlecase}}</span></p>
+            <p>Description: {{item.description}}</p>
+            <p>Price: {{item.price}} RON</p>
+            <p>Category: {{item.category}}</p>
+          </div>
+
+          <img [src]="item.imageUrl" class="img-preview"/>
+        </div>
+
+        <div class="div-buttons" *ngIf="showAdmin">
+          <button mat-raised-button color="primary" (click)="onEdit(item)">Edit</button>
+          <div class="div-spacer"></div>
+          <button mat-raised-button color="accent" (click)="onDelete(item)">Delete</button>
+        </div>
+        <div class="div-spacer"></div>
+        <div class="div-buttons">
+          <button mat-raised-button color="warn" (click)="onAddToCart(item)">Add to cart</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+</div>
