@@ -21,6 +21,11 @@
         <div class="div-spacer"></div>
         <div class="div-buttons">
           <button mat-raised-button color="warn" (click)="onAddToCart(item)">Add to cart</button>
+          <button mat-raised-button color="accent" (click)="onAddToCart(item)">
+            <button mat-icon-button class="favorite-icon" aria-label="heart-icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+          </button>
         </div>
       </mat-card-content>
     </mat-card>

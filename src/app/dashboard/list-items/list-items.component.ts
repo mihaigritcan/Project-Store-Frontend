@@ -27,7 +27,6 @@ export class ListItemsComponent {
 
   onDelete(item: Item): void {
     console.log(item);
-    // movie.id! => ! ii spune compilatorului ca proprietatea "id" este diferita de null.
     this.movieService.deleteItem(item.id!);
   }
 
@@ -42,4 +41,10 @@ export class ListItemsComponent {
     console.log(item)
     this.cartService.addToCart(item);
   }
+
+  // onFavorite(item: Item) {
+  //   console.log("item was added to favorite")
+  //   console.log(item)
+  //   this.favService.addToFavorite(item);
+  // }
 }

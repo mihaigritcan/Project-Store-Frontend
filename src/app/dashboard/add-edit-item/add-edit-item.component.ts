@@ -49,11 +49,8 @@ export class AddEditItemComponent implements OnChanges {
     item.price = this.price.getRawValue()!;
     item.category = this.category.getRawValue()!;
     item.imageUrl = this.imageUrl.getRawValue()!;
-
     item.id = this.id;
-
     this.resetFrom();
-
     if (item.id == "") {
       this.itemService.createItem(item);
     } else {

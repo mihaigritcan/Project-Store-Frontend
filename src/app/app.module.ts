@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthComponent} from './auth/auth.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
@@ -43,24 +43,25 @@ import {MatMenuModule} from "@angular/material/menu";
     ListCartsComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatButtonModule,
-        RouterOutlet,
-        AppRoutingModule,
-        HttpClientModule,
-        MatSelectModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatListModule,
-        MatDialogModule,
-        MatMenuModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    RouterOutlet,
+    AppRoutingModule,
+    HttpClientModule,
+    MatSelectModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDialogModule,
+    MatMenuModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

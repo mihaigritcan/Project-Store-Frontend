@@ -73,7 +73,6 @@ export class ItemService {
   readItemsByCategory(category:string) {
     this.httpClient.get(`${environment.apiUrl}/items/category?category=${category}`).subscribe((response:any) => {
       console.log(response);
-
       this.itemObservable.next(response.data);
     });
   }

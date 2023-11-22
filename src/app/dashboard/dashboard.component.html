@@ -1,31 +1,31 @@
-<mat-drawer-container class="page-container" autosize>
-  <mat-drawer #drawer class="page-sidenav" mode="side">
-    <img class="app-logo" [src]="logo"/>
-
-    <p class="app-name">{{ title | uppercase }}</p>
-
-    <div class="div-menu">
-      <mat-card *ngFor="let item of items" (click)="onChangePage(item)">
-        <mat-card-content class="item-menu-title">{{ item.title | uppercase }}</mat-card-content>
-      </mat-card>
-
+<mat-drawer-container class="page-container" autosize xmlns="http://www.w3.org/1999/html">
+  <mat-card>
+    <mat-toolbar>
+      <div class="web-name" (click)="onHome()"> Mr.WATT</div>
+      <span class="button-spacer"></span>
+      <button mat-icon-button class="favorite-icon" aria-label="heart-icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <app-cart-button></app-cart-button>
       <mat-card>
         <mat-card-content class="item-menu-title">{{ owner | titlecase }}</mat-card-content>
       </mat-card>
-    </div>
-  </mat-drawer>
+      <button mat-icon-button (click)="onLogout()">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-card>
 
   <mat-toolbar color="primary">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>{{ title}}</span>
-    <span class="button-spacer"></span>
-    <button mat-icon-button>
-      <mat-icon>logout</mat-icon>
-    </button>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <p class="admin-section-text">Admin Section</p>
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item (click)="onHome()">Home</button>
+      <button mat-menu-item (click)="onAdmin()">Admin</button>
+    </mat-menu>
   </mat-toolbar>
-
+  <br>
+  <br>
   <p class="lbl-title">Items Section</p>
 
   <div class="div-items">

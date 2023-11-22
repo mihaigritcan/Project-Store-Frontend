@@ -1,6 +1,21 @@
 .div-elements {
   display: flex;
 }
+.web-name{
+  color: darkgreen;
+  margin-left: 30px;
+  font-size: xxx-large;
+  font-style: revert;
+  width: 230px;
+}
+.admin-section-text{
+  color: red;
+  margin-top: 10px;
+  margin-left: 500px;
+  font-size: xxx-large;
+  font-style: revert;
+  width: 230px;
+}
 
 .div-spacer {
   width: 16px;

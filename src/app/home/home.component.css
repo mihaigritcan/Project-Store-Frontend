@@ -1,11 +1,16 @@
 .button-spacer {
   flex: 1 1 auto;
 }
-
 .page-sidenav {
   padding: 20px;
 }
-
+.web-name{
+  color: darkgreen;
+  margin-left: 30px;
+  font-size: xxx-large;
+  font-style: revert;
+  width: 230px;
+}
 .page-container {
   height: 100%;
 }
@@ -13,13 +18,6 @@
 .app-logo {
   width: 200px;
   align-content: center;
-}
-.app-name {
-  font-size: 20px;
-  color: black;
-  font-style: normal;
-  font-family: "Comic Sans MS";
-  text-align: center;
 }
 
 .div-menu {
@@ -30,7 +28,6 @@
   font-size: 16px;
   color: black;
   font-style: normal;
-  font-family: "Comic Sans MS";
   text-align: center;
 }
 

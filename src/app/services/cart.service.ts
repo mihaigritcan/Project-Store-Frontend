@@ -11,6 +11,7 @@ import {B} from "@angular/cdk/keycodes";
 })
 export class CartService {
   private cartObservable = new BehaviorSubject<Array<Item>>([]);
+  private favObservable = new BehaviorSubject<Array<Item>>([]);
   private allCartsObservable = new BehaviorSubject(<Array<any>>([]));
 
   constructor(private userService: UserService, private httpClient: HttpClient) {
@@ -81,4 +82,9 @@ export class CartService {
     });
   }
 
+  public addToFavorite(item: Item): void {
+    let items = this.favObservable.getValue();
+    items.push(item);
+    this.favObservable.next(items);
+  }
 }

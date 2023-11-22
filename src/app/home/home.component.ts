@@ -9,10 +9,10 @@ import {ItemService} from "../services/item.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  search : String ="";
   title: string = environment.appName;
   logo: string = environment.appLogo;
   owner: string = environment.appOwner;
-
   items: Array<any> = [
     {
       title: 'Home',
@@ -27,22 +27,28 @@ export class HomeComponent {
       route: '/auth',
     },
   ];
-
   imageSalesLeft: string = 'assets/sales_left.jpeg';
   imageSalesMiddle: string = 'assets/sales_middle.jpeg';
+  imagelogo:string ='assets/electronics_logo.jpg';
   //imageSalesRight: string = 'assets/sales_right.jpeg';
 
   constructor(private router: Router,private itemService:ItemService) {
 
   }
 
-  onChangePage(page: any) {
-    console.log(page);
-    this.router.navigateByUrl(page.route);
-  }
+  // onChangePage(page: any) {
+  //   console.log(page);
+  //   this.router.navigateByUrl(page.route);
+  // }
 
   onLogout(): void {
     this.router.navigateByUrl('/auth')
+  }
+  onHome(){
+    this.router.navigateByUrl('/home')
+  }
+  onAdmin(){
+    this.router.navigateByUrl('/dashboard')
   }
 onSelectCategory(category:string) {
     console.log(category);
