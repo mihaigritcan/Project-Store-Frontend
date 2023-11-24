@@ -15,10 +15,10 @@ export class UserService {
     this.readUsers();
     this.user = new User("", "", "", "")
 
-    this.user.id = "4";
-    this.user.username = "Catalin";
-    this.user.email = "catalin@gmail.com";
-    this.user.password = "";
+    this.user.id = "1";
+    this.user.username = "Mihail";
+    this.user.email = "mihail@gmail.com";
+    this.user.password = "12345";
   }
 
   getUserList() {

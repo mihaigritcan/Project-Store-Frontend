@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {environment} from "../../environments/environment";
 import {Router} from "@angular/router";
 import {ItemService} from "../services/item.service";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-home',
@@ -32,8 +33,8 @@ export class HomeComponent {
   imagelogo:string ='assets/electronics_logo.jpg';
   //imageSalesRight: string = 'assets/sales_right.jpeg';
 
-  constructor(private router: Router,private itemService:ItemService) {
-
+  constructor(private router: Router,private itemService:ItemService,userService:UserService) {
+  this.owner=userService.getUser().username;
   }
 
   // onChangePage(page: any) {

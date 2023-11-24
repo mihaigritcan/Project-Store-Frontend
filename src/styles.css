@@ -4,9 +4,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .input-container mat-form-field + mat-form-field {
   margin-left: 8px;
 }
+.hello-p{
+  font-size: xxx-large;
+  color: rgb(128, 128, 128);
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
 
 .card-container{
+  text-align: center;
   width: 400px;
+  height: 400px;
   margin: auto;
 }
 
@@ -17,7 +25,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .div-container{
   height: 100%;
   width: 100%;
-  display: flex;
+  display: grid;
 }
 
 .div-buttons-container{

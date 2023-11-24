@@ -12,7 +12,7 @@
   width: 230px;
 }
 .page-container {
-  height: 100%;
+  width: auto;
 }
 
 .app-logo {
