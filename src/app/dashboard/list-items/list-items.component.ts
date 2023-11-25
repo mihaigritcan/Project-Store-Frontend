@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Item} from "../../models/Item";
 import {ItemService} from "../../services/item.service";
 import {CartService} from "../../services/cart.service";
+import {FavoriteService} from "../../services/favorite.service";
 
 @Component({
   selector: 'app-list-items',
@@ -14,12 +15,13 @@ export class ListItemsComponent {
 
   itemsList: Array<Item> = [];
 
-  constructor(private movieService: ItemService, private cartService: CartService) {
-
+  constructor(private itemService: ItemService,
+              private cartService: CartService,
+              private favoriteService: FavoriteService) {
   }
 
   ngOnInit() {
-    this.movieService.getItemList().subscribe((itemsList: Array<Item>) => {
+    this.itemService.getItemList().subscribe((itemsList: Array<Item>) => {
       this.itemsList = itemsList;
     });
   }
@@ -27,7 +29,7 @@ export class ListItemsComponent {
 
   onDelete(item: Item): void {
     console.log(item);
-    this.movieService.deleteItem(item.id!);
+    this.itemService.deleteItem(item.id!);
   }
 
   onEdit(item: Item): void {
@@ -42,9 +44,9 @@ export class ListItemsComponent {
     this.cartService.addToCart(item);
   }
 
-  // onFavorite(item: Item) {
-  //   console.log("item was added to favorite")
-  //   console.log(item)
-  //   this.favService.addToFavorite(item);
-  // }
+  onFavorite(item: Item) {
+    console.log("item was added to favorite")
+    console.log(item)
+    this.favoriteService.addToFavorite(item);
+  }
 }
