@@ -1,4 +1,4 @@
-<div style="width: 100vw">
+
   <div class="div-row">
     <mat-card *ngFor="let item of itemsList" class="item-card">
       <mat-card-content>
@@ -21,6 +21,7 @@
         <div class="div-spacer"></div>
         <div class="div-buttons">
           <button mat-raised-button color="warn" (click)="onAddToCart(item)">Add to cart</button>
+          <div class="div-spacer"></div>
           <button mat-raised-button color="accent" (click)="onFavorite(item)">
             <button mat-icon-button class="favorite-icon" aria-label="heart-icon">
               <mat-icon>favorite</mat-icon>
@@ -32,4 +33,3 @@
 
   </div>
 
-</div>

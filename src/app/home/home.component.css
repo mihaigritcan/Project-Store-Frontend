@@ -1,27 +1,35 @@
-.button-spacer {
-  flex: 1 1 auto;
-}
-.page-sidenav {
-  padding: 20px;
-}
-.web-name{
-  color: darkgreen;
-  margin-left: 30px;
-  font-size: xxx-large;
-  font-style: revert;
-  width: 230px;
-}
 .page-container {
-  width: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  flex: auto;
+}
+.header1{
+  background-color: white;
+  align-items: center;
 }
 
-.app-logo {
-  width: 200px;
-  align-content: center;
+.web-name{
+  color: #213d21;
+  font-size: xxx-large;
+  font-style: normal;
+  font-family:fantasy;
+}
+.img-logo {
+  width: 65px;
+  height: 65px;
+  margin-top: 8px;
 }
 
-.div-menu {
-  margin-top: 50px;
+.search-width{
+  min-width: 480px;
+  height: 30px;
+  margin-left: 200px;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+.menu_bar{
+  background-color: #7C8F7CFF;
+  height: 50px;
 }
 
 .item-menu-title {
@@ -31,15 +39,27 @@
   text-align: center;
 }
 
-.div-banner {
-  width: 100%;
+.button-spacer {
+  flex: 1 1 auto;
+}
+.div-banner{
   display: flex;
-  margin-bottom: 50px;
-  margin-top:50px;
+  height: 120px;
+  background-color: #090D13;
+  align-items: center;
+}
+.img-banner{
+  height: 120px;
+  margin-left: auto;
+}
+.img-banner2{
+  height: 120px;
+  margin-right: auto;
+}
+.text-banner {
+  font-size: x-large;
+  font-family: "Courier New", emoji;
+  color: #c2eac2;
+  margin-left: auto;
 }
 
-.img-banner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}

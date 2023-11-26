@@ -12,7 +12,6 @@ import {UserService} from "../services/user.service";
 export class HomeComponent {
   search : String ="";
   title: string = environment.appName;
-  logo: string = environment.appLogo;
   owner: string = environment.appOwner;
   items: Array<any> = [
     {
@@ -28,10 +27,9 @@ export class HomeComponent {
       route: '/auth',
     },
   ];
-  imageSalesLeft: string = 'assets/sales_left.jpeg';
-  imageSalesMiddle: string = 'assets/sales_middle.jpeg';
-  imagelogo:string ='assets/electronics_logo.jpg';
-  //imageSalesRight: string = 'assets/sales_right.jpeg';
+  imageSalesLeft: string = 'assets/ban.jpg';
+  imageSalesMiddle: string = 'assets/BANNER11.jpg';
+  imagelogo:string ='assets/logo111.jpg';
 
   constructor(private router: Router,private itemService:ItemService,userService:UserService) {
   this.owner=userService.getUser().username;

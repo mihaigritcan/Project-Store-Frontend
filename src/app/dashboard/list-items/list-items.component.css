@@ -1,11 +1,9 @@
 .item-card {
   background-color: white;
-  display: flex; /* unnecesary, only the container needs to be flex */
-  /* unless this is another flex container */
-  flex-direction: column; /* also unnecesary unless it's for purposes not shown in the example */
-  min-width: 500px;
-  margin: 10px;
+  min-width: 400px;
   height: 250px;
+  margin: auto;
+  margin-top: 35px;
 }
 
 .lbl-title {
@@ -24,8 +22,8 @@
 }
 
 .div-row {
+  background-color: #ffffff;
   display: flex;
-  flex: 1; /* unnecesary */
   flex-wrap: wrap;
 }
 

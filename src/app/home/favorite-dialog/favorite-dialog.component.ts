@@ -32,7 +32,6 @@ export class FavoriteDialogComponent {
     console.log("item was added to cart")
     console.log(item)
     this.cartService.addToCart(item);
-    this.favoriteService.removeFromFavorite(item);
   }
   public onBuy() {
     this.favoriteService.createFavorite();

@@ -1,9 +1,10 @@
 <mat-drawer-container class="page-container" autosize>
   <mat-card>
-    <mat-toolbar>
+    <mat-toolbar class="header1" >
       <div class="web-name" (click)="onHome()"> Mr.WATT</div>
-        <form class="search-width">
-          <input type="text" matInput placeholder="Search" name="search" [(ngModel)]="search">
+        <div class><img class="img-logo" [src]="imagelogo"/></div>
+        <form>
+          <input type="text" matInput placeholder="Search" name="search" [(ngModel)]="search" class="search-width">
           <button mat-button>
             <mat-icon>search</mat-icon>
           </button>
@@ -19,14 +20,18 @@
       </button>
     </mat-toolbar>
   </mat-card>
-  <mat-toolbar color="primary">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-toolbar class="menu_bar" >
+    <button mat-button [matMenuTriggerFor]="menu" class="item-menu-title">{{'Menu'|uppercase}}</button>
+    <button mat-button (click)="onHome()" class="item-menu-title">
+      {{'Home'|uppercase}}
+    </button>
+
     <mat-menu #menu="matMenu" >
       <button mat-menu-item (click)="onHome()">Home</button>
       <button mat-menu-item (click)="onAdmin()">Admin</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="categories" class="item-menu-title">
-      {{'Categories'|uppercase}}
+      {{'Products'|uppercase}}
     </button>
     <mat-menu #categories="matMenu">
       <button mat-menu-item [matMenuTriggerFor]="passiveComponents" >Pasive Components</button>
@@ -48,7 +53,7 @@
 
     <mat-menu #semiconductors="matMenu">
       <button mat-menu-item (click)="onSelectCategory('transistors')">Transistors</button>
-      <button mat-menu-item (click)="onSelectCategory('diods')">Diods</button>
+      <button mat-menu-item (click)="onSelectCategory('diods')">Diodes</button>
       <button mat-menu-item (click)="onSelectCategory('rectifiers')">Rectifiers</button>
       <button mat-menu-item (click)="onSelectCategory('DSM')">Discrete Semiconductor Module</button>
       <button mat-menu-item (click)="onSelectCategory('Thyristors')">Thyristors</button>
@@ -82,14 +87,23 @@
     <mat-menu #telecomunication="matMenu">
       <button mat-menu-item>Insects</button>
     </mat-menu>
+    <span class="button-spacer"></span>
+    <button mat-button class="item-menu-title">{{'About us'|uppercase}}</button>
+    <button mat-button class="item-menu-title">{{'Help'|uppercase}}</button>
+
   </mat-toolbar>
 
 
   <div class="div-banner">
-    <img class="img-banner" [src]="imageSalesLeft"/>
+    <img class="img-banner2" [src]="imageSalesLeft"/>
+    <div class="text-banner">The Era of the Smart World</div>
     <img class="img-banner" [src]="imageSalesMiddle"/>
   </div>
 
-  <app-list-items [showAdmin]="false"></app-list-items>
 
+  <div class="items-container">
+  <app-list-items [showAdmin]="false"></app-list-items>
+  </div>
+  <mat-toolbar class="menu_bar" >
+  </mat-toolbar>
 </mat-drawer-container>
