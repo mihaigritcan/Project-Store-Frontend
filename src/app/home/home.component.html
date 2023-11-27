@@ -1,14 +1,14 @@
 <mat-drawer-container class="page-container" autosize>
   <mat-card>
-    <mat-toolbar class="header1" >
+    <mat-toolbar class="header1">
       <div class="web-name" (click)="onHome()"> Mr.WATT</div>
-        <div class><img class="img-logo" [src]="imagelogo"/></div>
-        <form>
-          <input type="text" matInput placeholder="Search" name="search" [(ngModel)]="search" class="search-width">
-          <button mat-button>
-            <mat-icon>search</mat-icon>
-          </button>
-        </form>
+      <div class><img class="img-logo" [src]="imagelogo"/></div>
+      <form>
+        <input type="text" matInput placeholder="Search" name="search" [(ngModel)]="search" class="search-width">
+        <button mat-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </form>
       <span class="button-spacer"></span>
       <app-favorite-button></app-favorite-button>
       <app-cart-button></app-cart-button>
@@ -20,90 +20,31 @@
       </button>
     </mat-toolbar>
   </mat-card>
-  <mat-toolbar class="menu_bar" >
+  <mat-toolbar class="menu_bar">
     <button mat-button [matMenuTriggerFor]="menu" class="item-menu-title">{{'Menu'|uppercase}}</button>
     <button mat-button (click)="onHome()" class="item-menu-title">
       {{'Home'|uppercase}}
     </button>
 
-    <mat-menu #menu="matMenu" >
+    <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="onHome()">Home</button>
       <button mat-menu-item (click)="onAdmin()">Admin</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="categories" class="item-menu-title">
-      {{'Products'|uppercase}}
-    </button>
-    <mat-menu #categories="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="passiveComponents" >Pasive Components</button>
-      <button mat-menu-item [matMenuTriggerFor]="semiconductors">Discret Semiconductors</button>
-      <button mat-menu-item [matMenuTriggerFor]="pcbs">PCB&PCBA</button>
-      <button mat-menu-item [matMenuTriggerFor]="circuits">Circuit Protection</button>
-      <button mat-menu-item [matMenuTriggerFor]="conectors">Connectors, Terminals & Accessories</button>
-      <button mat-menu-item [matMenuTriggerFor]="telecomunication">Telecomunication</button>
-      <button mat-menu-item [matMenuTriggerFor]="audio">AudioComponents</button>
-      <button mat-menu-item [matMenuTriggerFor]="sensors">Sensors</button>
-      <button mat-menu-item [matMenuTriggerFor]="iot">Wirless & IoT Module</button>
-
-    </mat-menu>
-    <mat-menu #passiveComponents="matMenu">
-      <button mat-menu-item (click)="onSelectCategory('resistors')">Resistors</button>
-      <button mat-menu-item (click)="onSelectCategory('capacitors')">Capacitors</button>
-      <button mat-menu-item (click)="onSelectCategory('inductors')">Inductors</button>
-    </mat-menu>
-
-    <mat-menu #semiconductors="matMenu">
-      <button mat-menu-item (click)="onSelectCategory('transistors')">Transistors</button>
-      <button mat-menu-item (click)="onSelectCategory('diods')">Diodes</button>
-      <button mat-menu-item (click)="onSelectCategory('rectifiers')">Rectifiers</button>
-      <button mat-menu-item (click)="onSelectCategory('DSM')">Discrete Semiconductor Module</button>
-      <button mat-menu-item (click)="onSelectCategory('Thyristors')">Thyristors</button>
-    </mat-menu>
-
-
-    <mat-menu #pcbs="matMenu">
-      <button mat-menu-item (click)="onSelectCategory('ceramicPCB')">Ceramic PCB</button>
-      <button mat-menu-item (click)="onSelectCategory('aluminumPCB')">Aluminum PCB</button>
-      <button mat-menu-item (click)="onSelectCategory('PCBA')">PCBA</button>
-      <button mat-menu-item (click)="onSelectCategory('FPC')">FPC</button>
-      <button mat-menu-item (click)="onSelectCategory('rigidPCB')">Diods</button>
-    </mat-menu>
-
-    <mat-menu #circuits="matMenu">
-      <button mat-menu-item>Sonoran desert toad</button>
-    </mat-menu>
-
-    <mat-menu #conectors="matMenu">
-      <button mat-menu-item>Banded Day Gecko</button>
-    </mat-menu>
-    <mat-menu #audio="matMenu">
-      <button mat-menu-item>Banded Day Gecko</button>
-    </mat-menu>
-    <mat-menu #sensors="matMenu">
-      <button mat-menu-item>Banded Day Gecko</button>
-    </mat-menu>
-    <mat-menu #iot="matMenu">
-      <button mat-menu-item>Banded Day Gecko</button>
-    </mat-menu>
-    <mat-menu #telecomunication="matMenu">
-      <button mat-menu-item>Insects</button>
-    </mat-menu>
+    <app-products></app-products>
     <span class="button-spacer"></span>
     <button mat-button class="item-menu-title">{{'About us'|uppercase}}</button>
     <button mat-button class="item-menu-title">{{'Help'|uppercase}}</button>
-
   </mat-toolbar>
-
-
   <div class="div-banner">
     <img class="img-banner2" [src]="imageSalesLeft"/>
     <div class="text-banner">The Era of the Smart World</div>
     <img class="img-banner" [src]="imageSalesMiddle"/>
   </div>
-
-
-  <div class="items-container">
-  <app-list-items [showAdmin]="false"></app-list-items>
+  <div class="home-images">
+    <img class="img-sale1" [src]="imageSales"/>
+    <img class="img-sale2" [src]="imagePodium"/>
   </div>
-  <mat-toolbar class="menu_bar" >
-  </mat-toolbar>
+
+  <app-list-items [showAdmin]="false"></app-list-items>
+  <mat-toolbar class="menu_bar"></mat-toolbar>
 </mat-drawer-container>

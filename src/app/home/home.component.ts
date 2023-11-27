@@ -30,15 +30,12 @@ export class HomeComponent {
   imageSalesLeft: string = 'assets/ban.jpg';
   imageSalesMiddle: string = 'assets/BANNER11.jpg';
   imagelogo:string ='assets/logo111.jpg';
+  imagePodium:string='assets/podium.jpg';
+  imageSales:string='assets/cyber_monday.jpg';
 
   constructor(private router: Router,private itemService:ItemService,userService:UserService) {
   this.owner=userService.getUser().username;
   }
-
-  // onChangePage(page: any) {
-  //   console.log(page);
-  //   this.router.navigateByUrl(page.route);
-  // }
 
   onLogout(): void {
     this.router.navigateByUrl('/auth')
@@ -49,9 +46,4 @@ export class HomeComponent {
   onAdmin(){
     this.router.navigateByUrl('/dashboard')
   }
-onSelectCategory(category:string) {
-    console.log(category);
-    this.itemService.readItemsByCategory(category);
-}
-
 }

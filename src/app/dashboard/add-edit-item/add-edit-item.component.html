@@ -29,7 +29,10 @@
             <mat-select [formControl]="category" required>
               <mat-option *ngFor="let cat of
                 ['RESISTORS','CAPACITORS','INDUCTORS','TRANSISTORS','DIODS',
-                'RECTIFIERS','DSM','TYRISTORS'
+                'RECTIFIERS','DSM','THYRISTORS','DSM','CERAMICPCB','ALUMINUMPCB',
+                'PCBA','FPC','RIGIDPCB','FUSES','VARISTORS','TVS1','TVS2','BREAKERS','TVS3','TVS4','TVS5',
+                'OTHER_C_P','GDT','PTC','THERMISTORS','USB_CONECTOR','HEADERS','OTHER_CONNECTORS',
+                'FIBER_OPTIC_C','CONNCETORS','TERMINAL_BLOCKS','BT_MODULE'
                 ]" [value]="cat">{{cat}}
               </mat-option>
             </mat-select>

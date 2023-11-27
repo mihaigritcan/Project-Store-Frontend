@@ -29,6 +29,7 @@ import { ListCartsComponent } from './dashboard/list-carts/list-carts.component'
 import {MatMenuModule} from "@angular/material/menu";
 import { FavoriteButtonComponent } from './home/favorite-button/favorite-button.component';
 import { FavoriteDialogComponent } from './home/favorite-dialog/favorite-dialog.component';
+import { ProductsComponent } from './home/products/products.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FavoriteDialogComponent } from './home/favorite-dialog/favorite-dialog.
     ListCartsComponent,
     FavoriteButtonComponent,
     FavoriteDialogComponent,
+    ProductsComponent,
 
   ],
   imports: [

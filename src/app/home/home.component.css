@@ -31,6 +31,20 @@
   background-color: #7C8F7CFF;
   height: 50px;
 }
+.home-images{
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.img-sale1{
+  height: 390px;
+  width: 500px;
+
+}
+.img-sale2{
+  height: 390px;
+  width: 500px;
+}
 
 .item-menu-title {
   font-size: 16px;
