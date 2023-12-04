@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Item} from "../models/Item";
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Subject} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 
@@ -9,7 +9,6 @@ import {environment} from "../../environments/environment";
 })
 export class ItemService {
   private itemObservable = new BehaviorSubject<Array<Item>>([]);
-
   constructor(private httpClient: HttpClient) {
     this.readItems();
   }
@@ -65,7 +64,6 @@ export class ItemService {
   readItems() {
     this.httpClient.get(`${environment.apiUrl}/items/`).subscribe((response:any) => {
       console.log(response);
-
       this.itemObservable.next(response.data);
     });
   }
@@ -76,4 +74,15 @@ export class ItemService {
       this.itemObservable.next(response.data);
     });
   }
+
+  readItemsBySearch(input: string): void {
+    const url = `${environment.apiUrl}/endpoint?input=${input}`;
+
+    this.httpClient.get(url).subscribe((response: any) => {
+      console.log(response);
+      this.itemObservable.next(response.data);
+    });
+  }
+
+
 }

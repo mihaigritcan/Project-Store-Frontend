@@ -3,12 +3,7 @@
     <mat-toolbar class="header1">
       <div class="web-name" (click)="onHome()"> Mr.WATT</div>
       <div class><img class="img-logo" [src]="imagelogo"/></div>
-      <form>
-        <input type="text" matInput placeholder="Search" name="search" [(ngModel)]="search" class="search-width">
-        <button mat-button>
-          <mat-icon>search</mat-icon>
-        </button>
-      </form>
+      <app-search-bar (searchEvent)="onSearch($event)"></app-search-bar>
       <span class="button-spacer"></span>
       <app-favorite-button></app-favorite-button>
       <app-cart-button></app-cart-button>
@@ -22,10 +17,7 @@
   </mat-card>
   <mat-toolbar class="menu_bar">
     <button mat-button [matMenuTriggerFor]="menu" class="item-menu-title">{{'Menu'|uppercase}}</button>
-    <button mat-button (click)="onHome()" class="item-menu-title">
-      {{'Home'|uppercase}}
-    </button>
-
+    <button mat-button (click)="onHome()" class="item-menu-title">{{'Home'|uppercase}}</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="onHome()">Home</button>
       <button mat-menu-item (click)="onAdmin()">Admin</button>
@@ -44,7 +36,6 @@
     <img class="img-sale1" [src]="imageSales"/>
     <img class="img-sale2" [src]="imagePodium"/>
   </div>
-
   <app-list-items [showAdmin]="false"></app-list-items>
   <mat-toolbar class="menu_bar"></mat-toolbar>
 </mat-drawer-container>

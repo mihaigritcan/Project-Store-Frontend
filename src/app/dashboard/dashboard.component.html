@@ -1,54 +1,54 @@
 <mat-drawer-container class="page-container" autosize xmlns="http://www.w3.org/1999/html">
-  <mat-card>
-    <mat-toolbar>
-      <div class="web-name" (click)="onHome()"> Mr.WATT</div>
-      <span class="button-spacer"></span>
-      <button mat-icon-button class="favorite-icon" aria-label="heart-icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <app-cart-button></app-cart-button>
-      <mat-card>
-        <mat-card-content class="item-menu-title">{{ owner | titlecase }}</mat-card-content>
-      </mat-card>
-      <button mat-icon-button (click)="onLogout()">
-        <mat-icon>logout</mat-icon>
-      </button>
+    <mat-card>
+        <mat-toolbar>
+            <div class="web-name" (click)="onHome()"> Mr.WATT</div>
+            <span class="button-spacer"></span>
+            <button mat-icon-button class="favorite-icon" aria-label="heart-icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <app-cart-button></app-cart-button>
+            <mat-card>
+                <mat-card-content class="item-menu-title">{{ owner | titlecase }}</mat-card-content>
+            </mat-card>
+            <button mat-icon-button (click)="onLogout()">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </mat-toolbar>
+    </mat-card>
+
+    <mat-toolbar color="primary">
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <p class="admin-section-text">Admin Section</p>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onHome()">Home</button>
+            <button mat-menu-item (click)="onAdmin()">Admin</button>
+        </mat-menu>
     </mat-toolbar>
-  </mat-card>
+    <br>
+    <br>
+    <p class="lbl-title">Items Section</p>
 
-  <mat-toolbar color="primary">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <p class="admin-section-text">Admin Section</p>
-    <mat-menu #menu="matMenu" >
-      <button mat-menu-item (click)="onHome()">Home</button>
-      <button mat-menu-item (click)="onAdmin()">Admin</button>
-    </mat-menu>
-  </mat-toolbar>
-  <br>
-  <br>
-  <p class="lbl-title">Items Section</p>
+    <div class="div-items">
+        <app-add-edit-item [item]="selectedItem"></app-add-edit-item>
+        <div class="div-spacer"></div>
+        <app-list-items [showAdmin]="true" (changeData)="onChangeItem($event)"></app-list-items>
+    </div>
 
-  <div class="div-items">
-    <app-add-edit-item [item]="selectedItem"></app-add-edit-item>
-    <div class="div-spacer"></div>
-    <app-list-items [showAdmin]="true" (changeData)="onChangeItem($event)"></app-list-items>
-  </div>
+    <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
 
-  <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
+    <p class="lbl-title">Users Section</p>
 
-  <p class="lbl-title">Users Section</p>
+    <div class="div-users">
+        <app-add-edit-user [user]="selectedUser"></app-add-edit-user>
+        <app-list-users (changeData)="onChangeUser($event)"></app-list-users>
+    </div>
 
-  <div class="div-users">
-    <app-add-edit-user [user]="selectedUser"></app-add-edit-user>
-    <app-list-users (changeData)="onChangeUser($event)"></app-list-users>
-  </div>
+    <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
 
-  <mat-divider style="margin-bottom: 25px;margin-top: 25px;"></mat-divider>
-
-  <p class="lbl-title">Carts Section</p>
-  <div class="div-carts">
-    <app-list-carts></app-list-carts>
-  </div>
+    <p class="lbl-title">Carts Section</p>
+    <div class="div-carts">
+        <app-list-carts></app-list-carts>
+    </div>
 
 
 </mat-drawer-container>

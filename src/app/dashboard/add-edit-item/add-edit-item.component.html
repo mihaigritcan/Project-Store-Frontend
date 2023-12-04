@@ -1,58 +1,58 @@
 <div class="div-parent">
-  <div class="div-row">
-    <mat-card class="movie-card-container">
-      <mat-card-content>
-        <div class="input-container">
-          <mat-form-field appearance="fill" class="input-field">
-            <mat-label>Title</mat-label>
-            <input matInput placeholder="Thor" [formControl]="title" required>
-            <mat-error *ngIf="title.invalid">{{getErrorMessage(title)}}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="input-container">
-          <mat-form-field appearance="fill" class="input-field">
-            <mat-label>Description</mat-label>
-            <input matInput placeholder="Any description" [formControl]="description" required>
-            <mat-error *ngIf="description.invalid">{{getErrorMessage(description)}}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="input-container">
-          <mat-form-field appearance="fill" class="input-field">
-            <mat-label>Price</mat-label>
-            <input matInput placeholder="20 RON" [formControl]="price" required>
-            <mat-error *ngIf="price.invalid">{{getErrorMessage(price)}}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="input-container">
-          <mat-form-field appearance="fill" class="input-field">
-            <mat-label>Category</mat-label>
-            <mat-select [formControl]="category" required>
-              <mat-option *ngFor="let cat of
+    <div class="div-row">
+        <mat-card class="movie-card-container">
+            <mat-card-content>
+                <div class="input-container">
+                    <mat-form-field appearance="fill" class="input-field">
+                        <mat-label>Title</mat-label>
+                        <input matInput placeholder="Thor" [formControl]="title" required>
+                        <mat-error *ngIf="title.invalid">{{getErrorMessage(title)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-container">
+                    <mat-form-field appearance="fill" class="input-field">
+                        <mat-label>Description</mat-label>
+                        <input matInput placeholder="Any description" [formControl]="description" required>
+                        <mat-error *ngIf="description.invalid">{{getErrorMessage(description)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-container">
+                    <mat-form-field appearance="fill" class="input-field">
+                        <mat-label>Price</mat-label>
+                        <input matInput placeholder="20 RON" [formControl]="price" required>
+                        <mat-error *ngIf="price.invalid">{{getErrorMessage(price)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-container">
+                    <mat-form-field appearance="fill" class="input-field">
+                        <mat-label>Category</mat-label>
+                        <mat-select [formControl]="category" required>
+                            <mat-option *ngFor="let cat of
                 ['RESISTORS','CAPACITORS','INDUCTORS','TRANSISTORS','DIODS',
                 'RECTIFIERS','DSM','THYRISTORS','DSM','CERAMICPCB','ALUMINUMPCB',
                 'PCBA','FPC','RIGIDPCB','FUSES','VARISTORS','TVS1','TVS2','BREAKERS','TVS3','TVS4','TVS5',
                 'OTHER_C_P','GDT','PTC','THERMISTORS','USB_CONECTOR','HEADERS','OTHER_CONNECTORS',
-                'FIBER_OPTIC_C','CONNCETORS','TERMINAL_BLOCKS','BT_MODULE'
-                ]" [value]="cat">{{cat}}
-              </mat-option>
-            </mat-select>
-            <mat-error *ngIf="category.invalid">{{getErrorMessage(category)}}</mat-error>
-          </mat-form-field>
+                'FIBER_OPTIC_C','CONNCETORS','TERMINAL_BLOCKS','BT_MODULE']" [value]="cat">{{cat}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="category.invalid">{{getErrorMessage(category)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-container">
+                    <mat-form-field appearance="fill" class="input-field">
+                        <mat-label>Image URL</mat-label>
+                        <input matInput placeholder="Link from Google" [formControl]="imageUrl" required>
+                        <mat-error *ngIf="imageUrl.invalid">{{getErrorMessage(imageUrl)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="div-buttons-container">
+                    <button mat-raised-button color="primary"
+                            (click)="onSave()">{{id == "" ? "Create" : "Update"}}</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <div class="div-image-row" *ngIf="imageUrl.getRawValue() != ''">
+            <img class="img-movie" [src]="imageUrl.getRawValue()"/>
         </div>
-        <div class="input-container">
-          <mat-form-field appearance="fill" class="input-field">
-            <mat-label>Image URL</mat-label>
-            <input matInput placeholder="Link from Google" [formControl]="imageUrl" required>
-            <mat-error *ngIf="imageUrl.invalid">{{getErrorMessage(imageUrl)}}</mat-error>
-          </mat-form-field>
-        </div>
-        <div class="div-buttons-container">
-          <button mat-raised-button color="primary" (click)="onSave()">{{id == "" ? "Create" : "Update"}}</button>
-        </div>
-      </mat-card-content>
-    </mat-card>
-    <div class="div-image-row" *ngIf="imageUrl.getRawValue() != ''">
-      <img class="img-movie" [src]="imageUrl.getRawValue()"/>
     </div>
-  </div>
 </div>

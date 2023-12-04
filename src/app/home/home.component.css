@@ -1,79 +1,77 @@
 .page-container {
-  padding-left: 80px;
-  padding-right: 80px;
-  flex: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    flex: auto;
 }
-.header1{
+.header1 {
   background-color: white;
   align-items: center;
 }
-
-.web-name{
-  color: #213d21;
-  font-size: xxx-large;
-  font-style: normal;
-  font-family:fantasy;
+.web-name {
+    color: #213d21;
+    font-size: xxx-large;
+    font-style: normal;
+    font-family: fantasy;
 }
 .img-logo {
-  width: 65px;
-  height: 65px;
-  margin-top: 8px;
+    width: 65px;
+    height: 65px;
+    margin-top: 8px;
+}
+.menu_bar {
+    background-color: #7C8F7CFF;
+    height: 50px;
 }
 
-.search-width{
-  min-width: 480px;
-  height: 30px;
-  margin-left: 200px;
-  border-radius: 20px;
-  padding-left: 10px;
+.home-images {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
 }
-.menu_bar{
-  background-color: #7C8F7CFF;
-  height: 50px;
-}
-.home-images{
-  display: flex;
-  justify-content: space-around;
-  padding: 30px;
-}
-.img-sale1{
-  height: 390px;
-  width: 500px;
+
+.img-sale1 {
+    height: 390px;
+    width: 500px;
 
 }
-.img-sale2{
-  height: 390px;
-  width: 500px;
+
+.img-sale2 {
+    height: 390px;
+    width: 500px;
 }
 
 .item-menu-title {
-  font-size: 16px;
-  color: black;
-  font-style: normal;
-  text-align: center;
+    font-size: 16px;
+    color: black;
+    font-style: normal;
+    text-align: center;
 }
 
 .button-spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
-.div-banner{
-  display: flex;
-  height: 120px;
-  background-color: #090D13;
-  align-items: center;
+
+.div-banner {
+    display: flex;
+    height: 120px;
+    background-color: #090D13;
+    align-items: center;
 }
-.img-banner{
-  height: 120px;
-  margin-left: auto;
+
+.img-banner {
+    height: 120px;
+    margin-left: auto;
 }
-.img-banner2{
-  height: 120px;
-  margin-right: auto;
+
+.img-banner2 {
+    height: 120px;
+    margin-right: auto;
 }
+
 .text-banner {
-  font-size: x-large;
-  font-family: "Courier New", emoji;
-  color: #c2eac2;
-  margin-left: auto;
+    font-size: x-large;
+    font-family: "Courier New", emoji;
+    color: #c2eac2;
+    margin-left: auto;
 }
 

@@ -8,19 +8,15 @@ import {environment} from "../../environments/environment";
 })
 export class AuthService {
 
-  constructor(private httpClient: HttpClient) {
-
-  }
+  constructor(private httpClient: HttpClient) {}
 
   public logIn(email: string, password: string) {
     let body = {
       "email": email,
       "password": password
     }
-
     return this.httpClient.post(`${environment.apiUrl}/users/login`, body);
   }
-
   public register(email: string, password: string, userName: string, reTypePassword: string) {
     let body = {
       "email": email,

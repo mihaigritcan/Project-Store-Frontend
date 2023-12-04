@@ -1,8 +1,5 @@
-.item-card {
+.item-favorite {
   background-color: white;
-  display: flex; /* unnecesary, only the container needs to be flex */
-  /* unless this is another flex container */
-  flex-direction: column; /* also unnecesary unless it's for purposes not shown in the example */
   width: 70vw;
   margin: 10px;
 }
@@ -25,7 +22,6 @@
 
 .div-row {
   display: flex;
-  flex: 1; /* unnecesary */
   flex-wrap: wrap;
 }
 

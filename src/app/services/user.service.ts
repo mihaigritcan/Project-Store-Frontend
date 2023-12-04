@@ -10,16 +10,31 @@ import {User} from "../models/User";
 export class UserService {
   private user: User = new User("", "","","");
   private userObservable = new BehaviorSubject([]);
-
   constructor(private httpClient:HttpClient) {
     this.readUsers();
     this.user = new User("", "", "", "")
-
     this.user.id = "1";
     this.user.username = "Mihail";
     this.user.email = "mihail@gmail.com";
     this.user.password = "12345";
   }
+  public readUsers(){
+    this.httpClient.get(`${environment.apiUrl}/users/`).subscribe((response:any) => {
+      console.log(response);
+      this.userObservable.next(response.data);});
+  }
+  public createUser(username: string,email: string, password: string, reTypePassword: string,  userRole: string){
+    let body = {
+      "username": username, "email": email,
+      "password": password, "reTypePassword": reTypePassword,
+      "userRole": userRole,}
+    return this.httpClient.post(`${environment.apiUrl}/users/`, body).subscribe((response:any) => {
+      console.log(response);
+      alert(response.message);
+      this.readUsers();
+    });
+  }
+
 
   getUserList() {
     return this.userObservable.asObservable();
@@ -39,20 +54,7 @@ export class UserService {
     return this.user != null;
   }
 
-  public createUser(username: string,email: string, password: string, reTypePassword: string,  userRole: string){
-    let body = {
-      "username": username,
-      "email": email,
-      "password": password,
-      "reTypePassword": reTypePassword,
-      "userRole": userRole,
-    }
-    return this.httpClient.post(`${environment.apiUrl}/users/`, body).subscribe((response:any) => {
-      console.log(response);
-      alert(response.message);
-      this.readUsers();
-    });
-  }
+
 
   public updateUser(id: string, username: string,email: string, password: string, reTypePassword: string, userRole: string){
     let body = {
@@ -78,11 +80,5 @@ export class UserService {
     });
   }
 
-  public readUsers(){
-    this.httpClient.get(`${environment.apiUrl}/users/`).subscribe((response:any) => {
-      console.log(response);
 
-      this.userObservable.next(response.data);
-    });
-  }
 }

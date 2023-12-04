@@ -30,6 +30,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import { FavoriteButtonComponent } from './home/favorite-button/favorite-button.component';
 import { FavoriteDialogComponent } from './home/favorite-dialog/favorite-dialog.component';
 import { ProductsComponent } from './home/products/products.component';
+import { SearchBarComponent } from './home/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ProductsComponent } from './home/products/products.component';
     FavoriteButtonComponent,
     FavoriteDialogComponent,
     ProductsComponent,
+    SearchBarComponent,
 
   ],
   imports: [
